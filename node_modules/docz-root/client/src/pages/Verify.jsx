@@ -17,6 +17,7 @@ const Verify = () => {
   const [result, setResult] = useState(null);
   const [documentDetails, setDocumentDetails] = useState(null);
   const [blockchainVerified, setBlockchainVerified] = useState(null);
+  const [loadingHash, setLoadingHash] = useState(false);
 
   const onDrop = useCallback(async (acceptedFiles) => {
     if (acceptedFiles.length > 0) {
@@ -25,12 +26,15 @@ const Verify = () => {
       setResult(null);
       setDocumentDetails(null);
       setBlockchainVerified(null);
+      setLoadingHash(true);
 
       try {
         const hash = await generateHash(selectedFile);
         setFileHash(hash);
       } catch (error) {
         console.error('Hash error:', error);
+      } finally {
+        setLoadingHash(false);
       }
     }
   }, []);
@@ -62,6 +66,7 @@ const Verify = () => {
     setResult(null);
     setDocumentDetails(null);
     setBlockchainVerified(null);
+    setLoadingHash(false);
 
     try {
       let verifyData;
@@ -74,7 +79,8 @@ const Verify = () => {
 
       const response = await documentAPI.verify(verifyData);
       setResult(response.result);
-      setBlockchainVerified(response.blockchainVerified);
+      // Server doesn't return blockchainVerified — derive from whether doc was found
+      setBlockchainVerified(response.result === 'authentic');
       if (response.details && Object.keys(response.details).length > 0) {
         setDocumentDetails(response.details);
       }
@@ -102,6 +108,7 @@ const Verify = () => {
     setResult(null);
     setDocumentDetails(null);
     setBlockchainVerified(null);
+    setLoadingHash(false);
   };
 
   return (
@@ -199,13 +206,18 @@ const Verify = () => {
         {/* Verify Button */}
         <button
           onClick={handleVerify}
-          disabled={verifying || (verifyMode === 'file' && !file) || (verifyMode === 'hash' && !hashInput)}
+          disabled={verifying || loadingHash || (verifyMode === 'file' && !fileHash) || (verifyMode === 'hash' && !hashInput.trim())}
           className="btn-primary w-full flex items-center justify-center gap-2 py-4 mb-8"
         >
           {verifying ? (
             <>
               <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
               Verifying...
+            </>
+          ) : loadingHash ? (
+            <>
+              <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
+              Computing Hash...
             </>
           ) : (
             <>
