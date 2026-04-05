@@ -1,0 +1,232 @@
+{
+  "app": {
+    "name": "DocZ+",
+    "tagline": "Secure. Tamper-Proof. Instantly Verifiable Legal Records"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "upload": "Upload",
+    "verify": "Verify",
+    "admin": "Admin"
+  },
+  "home": {
+    "heroTitle": "Your Digital Legal Locker",
+    "heroSubtitle": "Store, share, and verify legal documents with the security of blockchain technology. Trusted by citizens, lawyers, and government authorities.",
+    "features": {
+      "secure": "Bank-Grade Security",
+      "secureDesc": "Your documents are encrypted and stored across distributed networks",
+      "tamper": "Tamper-Proof",
+      "tamperDesc": "Every document is hashed and stored permanently on Polygon blockchain",
+      "instant": "Instant Verification",
+      "instantDesc": "Verify authenticity of any document in seconds",
+      "accessible": "Accessible Anywhere",
+      "accessibleDesc": "Access your documents from any device, anywhere in the world"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": "Upload Document",
+      "step1Desc": "Upload your document and fill in the details",
+      "step2": "Hash & Store",
+      "step2Desc": "File is converted to hash and stored on IPFS + Polygon",
+      "step3": "Get Verified",
+      "step3Desc": "Receive transaction ID and QR code for verification"
+    },
+    "stats": {
+      "documents": "Documents Secured",
+      "verifications": "Verifications",
+      "users": "Active Users",
+      "countries": "Countries"
+    }
+  },
+  "auth": {
+    "connect": "Connect Wallet",
+    "connecting": "Connecting...",
+    "disconnect": "Disconnect",
+    "walletConnected": "Wallet Connected",
+    "wrongNetwork": "Wrong Network",
+    "switchNetwork": "Switch to Polygon",
+    "installMetaMask": "Please install MetaMask"
+  },
+  "dashboard": {
+    "title": "My Documents",
+    "myDocuments": "My Documents",
+    "sharedWithMe": "Shared With Me",
+    "allDocuments": "All Documents",
+    "noDocuments": "No documents yet",
+    "noDocumentsDesc": "Upload your first document to get started",
+    "filters": {
+      "all": "All",
+      "verified": "Verified",
+      "pending": "Pending",
+      "revoked": "Revoked"
+    },
+    "search": "Search documents...",
+    "sortBy": "Sort by",
+    "newest": "Newest First",
+    "oldest": "Oldest First",
+    "name": "Name A-Z"
+  },
+  "upload": {
+    "title": "Secure Upload",
+    "subtitle": "Upload and secure your document on the blockchain",
+    "dragDrop": "Drag & drop your file here, or click to browse",
+    "supported": "Supported: PDF, Images, Word Docs, Text files (Max 100MB)",
+    "documentTitle": "Document Title",
+    "documentTitlePlaceholder": "Enter document title",
+    "documentType": "Document Type",
+    "selectType": "Select document type",
+    "description": "Description (Optional)",
+    "descriptionPlaceholder": "Add a brief description",
+    "tags": "Tags (Optional)",
+    "tagsPlaceholder": "Add tags separated by commas",
+    "uploading": "Uploading...",
+    "uploadButton": "Secure Upload",
+    "success": {
+      "title": "Document Secured Successfully!",
+      "subtitle": "Your document has been stored on the blockchain",
+      "txId": "Transaction ID",
+      "qrCode": "QR Code",
+      "docHash": "Document Hash",
+      "viewDashboard": "View Dashboard",
+      "uploadAnother": "Upload Another"
+    }
+  },
+  "verify": {
+    "title": "Verify Document",
+    "subtitle": "Check if a document is authentic and hasn't been tampered with",
+    "uploadToVerify": "Upload document to verify",
+    "dragDrop": "Drag & drop or click to upload",
+    "orEnter": "Or enter document hash directly",
+    "hashPlaceholder": "Enter document hash",
+    "verifyButton": "Verify Now",
+    "verifying": "Verifying...",
+    "result": {
+      "authentic": "Document is Authentic",
+      "authenticDesc": "This document has not been tampered with and matches our records",
+      "tampered": "Document Tampered",
+      "tamperedDesc": "This document has been modified after upload",
+      "notFound": "Document Not Found",
+      "notFoundDesc": "This document hash is not in our records"
+    },
+    "details": {
+      "title": "Document Details",
+      "storedHash": "Stored Hash",
+      "uploadedOn": "Uploaded On",
+      "owner": "Owner",
+      "type": "Type",
+      "ipfs": "IPFS Hash",
+      "tx": "Transaction"
+    },
+    "verifyAnother": "Verify Another Document"
+  },
+  "document": {
+    "details": "Document Details",
+    "preview": "Preview",
+    "share": "Share",
+    "access": "Manage Access",
+    "revoke": "Revoke",
+    "download": "Download",
+    "delete": "Delete",
+    "history": "History",
+    "auditLog": "Audit Log",
+    "accessList": "Access List",
+    "sharedLinks": "Shared Links",
+    "created": "Created",
+    "verified": "Verified",
+    "revoked": "Revoked",
+    "owner": "Owner",
+    "hash": "Hash",
+    "type": "Type",
+    "size": "Size",
+    "ipfsHash": "IPFS Hash",
+    "txHash": "Transaction Hash"
+  },
+  "share": {
+    "title": "Share Document",
+    "subtitle": "Generate a secure link to share this document",
+    "linkExpiry": "Link expires in",
+    "1day": "1 day",
+    "7days": "7 days",
+    "30days": "30 days",
+    "never": "Never",
+    "generateLink": "Generate Link",
+    "linkCopied": "Link copied to clipboard!",
+    "qrCode": "QR Code",
+    "shareUrl": "Share URL"
+  },
+  "access": {
+    "title": "Manage Access",
+    "subtitle": "Control who can access your document",
+    "addAccess": "Add Access",
+    "walletAddress": "Wallet Address",
+    "walletPlaceholder": "Enter wallet address",
+    "accessLevel": "Access Level",
+    "view": "View Only",
+    "verify": "Verify",
+    "full": "Full Access",
+    "expiry": "Access Expiry",
+    "grant": "Grant Access",
+    "revoke": "Revoke",
+    "active": "Active",
+    "expired": "Expired",
+    "noAccess": "No one else has access"
+  },
+  "profile": {
+    "title": "Profile",
+    "wallet": "Wallet Address",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "role": "Role",
+    "language": "Language",
+    "save": "Save Changes",
+    "updated": "Profile updated successfully"
+  },
+  "roles": {
+    "citizen": "Citizen",
+    "lawyer": "Lawyer",
+    "authority": "Government Authority",
+    "admin": "Admin"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "uploaded": "Document uploaded successfully",
+    "verified": "Document verified",
+    "shared": "Document shared",
+    "accessed": "Someone accessed your document",
+    "tampered": "Tampering detected!",
+    "accessGranted": "Access granted",
+    "accessRevoked": "Access revoked"
+  },
+  "errors": {
+    "generic": "Something went wrong",
+    "network": "Network error. Please try again.",
+    "auth": "Authentication failed",
+    "upload": "Upload failed",
+    "verify": "Verification failed",
+    "blockchain": "Blockchain transaction failed"
+  },
+  "common": {
+    "loading": "Loading...",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "download": "Download",
+    "share": "Share",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "noResults": "No results found",
+    "pageNotFound": "Page not found"
+  }
+}
